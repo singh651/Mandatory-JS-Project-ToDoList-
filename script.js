@@ -37,5 +37,4 @@ function savetasksinlocalstorage(){
     localStorage.setItem("tasks",JSON.stringify(tasks));
 };
 
-
 })
