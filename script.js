@@ -28,8 +28,17 @@ addtask.addEventListener('click',function(){
 function rendertask(task){
     const li = document.createElement("li");
     li.setAttribute("data-id", task.id);
+    if(task.completed){
+        li.classList.add("Completed");
+    }
     li.innerHTML = `<span>${task.text}</span>
     <button>Delete</button>`;
+    li.addEventListener('click', (e) => {
+        if(e.target.tagName === 'BUTTON') return;
+        task.completed = !task.completed;
+        li.classList.toggle('completed');
+        savetasksinlocalstorage();
+    })
     todolist.appendChild(li);
 }
 
