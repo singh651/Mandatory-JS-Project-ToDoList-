@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
             savetasksinlocalstorage(); // Save the updated task state
         });
 
-        // Delete task when clicking the delete button
-        // li.querySelector('button').addEventListener('click', (e) => {
-        //     e.stopPropagation(); // Stop propagation to prevent toggling when deleting
-        //     tasks = tasks.filter(t => t.id !== task.id); // Remove the task from the list
-        //     savetasksinlocalstorage(); // Update localStorage
-        //     todolist.removeChild(li); // Remove the task from the DOM
-        // });
+        //Delete task when clicking the delete button
+        li.querySelector('button').addEventListener('click', (e) => {
+            e.stopPropagation(); // Stop propagation to prevent toggling when deleting
+            tasks = tasks.filter(t => t.id !== task.id); // Remove the task from the list
+            savetasksinlocalstorage(); // Update localStorage
+            todolist.removeChild(li); // Remove the task from the DOM
+        });
 
         todolist.appendChild(li); // Append the task to the list
     }

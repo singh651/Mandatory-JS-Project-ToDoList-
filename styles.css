@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-} 
+}
 
 .container {
     background-color: white;
@@ -82,4 +82,9 @@ li button {
 
 li button:hover {
     background-color: #c82333;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: grey;
 }
