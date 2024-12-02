@@ -1,6 +1,14 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and Font */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Gotham', Arial, sans-serif;
+    background-color: #101820; /* Dark, Batman-themed background */
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,51 +17,62 @@ body {
     height: 100vh;
 }
 
+/* Container for the List */
 .container {
-    background-color: white;
+    background-color: #212529; /* Dark grey for the Batman feel */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); /* Deep shadow for depth */
     padding: 20px;
-    width: 300px;
+    width: 320px;
     max-width: 100%;
+    border: 2px solid #ffc107; /* Yellow border like Batman’s logo */
 }
 
+/* Heading Styling */
 h1 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 20px;
     text-align: center;
-    color: #333;
+    color: #ffc107; /* Batman yellow */
+    font-weight: bold;
 }
 
+/* Input and Button Container */
 .input-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
+/* Input Field Styling */
 .input-container input {
     flex: 1;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #495057;
     border-radius: 4px;
+    background-color: #495057; /* Dark input background */
+    color: white;
     margin-right: 10px;
 }
 
+/* Add Task Button */
 .input-container button {
-    background-color: #007bff;
-    color: white;
+    background-color: #ffc107; /* Yellow */
+    color: #212529; /* Dark grey text */
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .input-container button:hover {
-    background-color: #0056b3;
+    background-color: #e0a800; /* Darker yellow */
 }
 
+/* To-Do List Items */
 ul {
     list-style-type: none;
     padding: 0;
@@ -63,28 +82,32 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #343a40; /* Darker grey */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffc107; /* Yellow border */
+    color: white;
 }
 
+/* Delete Button */
 li button {
-    background-color: #dc3545;
-    color: white;
+    background-color: #e0a800; /* Yellow for delete button */
+    color: #212529; /* Dark grey text */
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 li button:hover {
-    background-color: #c82333;
+    background-color: #ffc107;
 }
 
+/* Completed Tasks */
 .completed span {
     text-decoration: line-through;
-    color: grey;
+    color: #adb5bd; /* Light grey for completed tasks */
 }
